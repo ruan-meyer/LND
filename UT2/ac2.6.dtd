@@ -1,0 +1,9 @@
+<!ELEMENT futbol (jugador | equipo)+>
+<!ELEMENT jugador EMPTY>
+<!ELEMENT equipo EMPTY>
+<!ATTLIST jugador nombre CDATA #REQUIRED
+                  codigo ID #REQUIRED
+>
+<!ATTLIST equipo nombre CDATA #REQUIRED
+                 jugadores IDREFS #REQUIRED
+>
