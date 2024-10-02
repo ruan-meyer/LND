@@ -1,0 +1,10 @@
+<!ENTITY % personalDTD SYSTEM "personal.dtd">
+<!ENTITY % pizzasDTD SYSTEM "pizzas.dtd">
+<!ENTITY personal SYSTEM "personal.xml">
+<!ENTITY pizzas SYSTEM "pizzas.xml">
+
+<!ELEMENT estlabecimeinto ANY>
+    <!ATTLIST estlabecimeinto nombre CDATA #REQUIRED>
+
+%pizzasDTD;
+%personalDTD;
