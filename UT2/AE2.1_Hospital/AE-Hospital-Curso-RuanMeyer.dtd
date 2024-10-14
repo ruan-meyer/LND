@@ -1,0 +1,38 @@
+<!ELEMENT hospital (pacientes, medicos, citas, salas)>
+
+<!ELEMENT pacientes (paciente)>
+    <!ELEMENT paciente (nombre, apellidos, fecha_nacimiento, sexo, n_seguridad_social, direccion)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT fecha_nacimiento (#PCDATA)>
+        <!ELEMENT sexo (#PCDATA)>
+        <!ELEMENT n_seguridad_social (#PCDATA)>
+        <!ELEMENT direccion (#PCDATA)>
+        <!ATTLIST paciente id ID #REQUIRED>
+
+<!ELEMENT medicos (medico)>
+    <!ELEMENT medico (nombre, apellidos, especialidad, n_colegiado, departamento)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT especialidad (#PCDATA)>
+        <!ELEMENT n_colegiado (#PCDATA)>
+        <!ATTLIST medico id ID #REQUIRED>
+
+<!ELEMENT citas (cita)>
+    <!ELEMENT cita (paciente, medico, sala, fecha, hora, motivo, acudido)>
+        <!ELEMENT paciente (#PCDATA)>
+        <!ELEMENT medico (#PCDATA)>
+        <!ELEMENT sala (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT hora (#PCDATA)>
+        <!ELEMENT motivo (#PCDATA)>
+        <!ELEMENT acudido (#PCDATA)>
+
+<!ELEMENT salas (sala)>
+    <!ELEMENT sala (n_sala, tipo_sala, capacidad, equipos)>
+    <!ELEMENT n_sala (#PCDATA)>
+    <!ELEMENT tipo_sala (#PCDATA)>
+    <!ELEMENT capacidad (#PCDATA)>
+    <!ELEMENT equipos (equipo)>
+        <!ELEMENT equipo (descripcion)>
+            <!ELEMENT descripcion (#PCDATA)>
