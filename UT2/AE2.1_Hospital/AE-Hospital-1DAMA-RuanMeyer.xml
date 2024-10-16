@@ -1,0 +1,192 @@
+<!-- 1DAMA - Ruan Meyer -->
+ 
+<!DOCTYPE hospital SYSTEM "AE-Hospital-1DAMA-RuanMeyer.dtd">
+
+<hospital>
+    <pacientes>
+        <paciente id="p1" sexo="maculino">
+            <nombre>Pedro</nombre>
+            <apellidos>Garcia</apellidos>
+            <fecha_nacimiento>13/8/1997</fecha_nacimiento>
+            <direccion tipo_via="calle">
+                <nombre_via>Acores</nombre_via>
+                <numero>32</numero>
+                <ciudad>Granadilla de Abona</ciudad>
+                <contacto tipo="fijo">
+                    985368156
+                </contacto>
+            </direccion>
+        </paciente>
+        <paciente id="p2" sexo="femenino">
+            <nombre>Maria</nombre>
+            <apellidos>Hernandez</apellidos>
+            <fecha_nacimiento>17/2/2001</fecha_nacimiento>
+            <direccion tipo_via="callejon">
+                <nombre_via>alig</nombre_via>
+                <numero>3</numero>
+                <ciudad>Murcia</ciudad>
+                <contacto tipo="fijo">
+                    856258156
+                </contacto>
+                <contacto tipo="movil">
+                    698237586
+                </contacto>
+            </direccion>
+        </paciente>
+        <paciente id="p3" sexo="otro">
+            <nombre>Sapo</nombre>
+            <apellidos>Silva</apellidos>
+            <fecha_nacimiento>19/5/2005</fecha_nacimiento>
+            <direccion tipo_via="avenida">
+                <nombre_via>Trinidad</nombre_via>
+                <numero>97</numero>
+                <ciudad>San Cristobal de la Laguna</ciudad>
+                <contacto tipo="movil">
+                    675953148
+                </contacto>
+            </direccion>
+        </paciente>
+        <paciente id="p4" sexo="maculino">
+            <nombre>Carlos</nombre>
+            <apellidos>Sanxe</apellidos>
+            <fecha_nacimiento>7/4/1984</fecha_nacimiento>
+            <direccion tipo_via="calle">
+                <nombre_via>Perro</nombre_via>
+                <numero>64</numero>
+                <ciudad>La Matanza de Acentejo</ciudad>
+                <contacto tipo="fijo">
+                    985269753
+                </contacto>
+            </direccion>
+        </paciente>
+        <paciente id="p5" sexo="maculino">
+            <nombre>Isadora</nombre>
+            <apellidos>Fischer</apellidos>
+            <fecha_nacimiento>15/3/2004</fecha_nacimiento>
+            <direccion tipo_via="calle">
+                <nombre_via>Pez</nombre_via>
+                <numero>74</numero>
+                <ciudad>La Orotava</ciudad>
+                <contacto tipo="movil">
+                    685324952
+                </contacto>
+            </direccion>
+        </paciente>
+    </pacientes>
+
+    <medicos>
+        <medico id="m1">
+            <nombre>Arch</nombre>
+            <apellidos>Linux</apellidos>
+            <especialidad>Cardiologo</especialidad>
+            <n_colegiado>25896548</n_colegiado>
+            <departamento>Cardiologia</departamento>
+        </medico>
+        <medico id="m2">
+            <nombre>Pop</nombre>
+            <apellidos>Os</apellidos>
+            <especialidad>Cirujano</especialidad>
+            <n_colegiado>85269542</n_colegiado>
+            <departamento>Cardiologia</departamento>
+        </medico>
+        <medico id="m3">
+            <nombre>Red</nombre>
+            <apellidos>Hat</apellidos>
+            <especialidad>Pediatra</especialidad>
+            <n_colegiado>95368424</n_colegiado>
+            <departamento>Pediatria</departamento>
+        </medico>
+    </medicos>
+
+    <salas>
+        <sala n_sala="s1">
+            <tipo_sala>consulta</tipo_sala>
+            <capacidad>3</capacidad>
+            <equipos>
+                <equipo>Ordenador</equipo>
+                <equipo>Bascula</equipo>
+            </equipos>
+        </sala>
+        <sala n_sala="s2">
+            <tipo_sala>Quirofano</tipo_sala>
+            <capacidad>4</capacidad>
+            <equipos>
+                <equipo>Maquina Anestesia</equipo>
+            </equipos>
+        </sala>
+        <sala n_sala="s3">
+            <tipo_sala>consulta</tipo_sala>
+            <capacidad>2</capacidad>
+        </sala>
+        <sala n_sala="s4">
+            <tipo_sala>Laboratorio</tipo_sala>
+            <capacidad>10</capacidad>
+            <equipos>
+                <equipo>Ordenador</equipo>
+                <equipo>Microscopio</equipo>
+            </equipos>
+        </sala>
+        <sala n_sala="s5">
+            <tipo_sala>consulta</tipo_sala>
+            <capacidad>3</capacidad>
+            <equipos>
+                <equipo>Mesa</equipo>
+                <equipo>Bascula</equipo>
+                <equipo>Telefono</equipo>
+            </equipos>
+        </sala>
+    </salas>
+
+    <citas>
+        <cita paciente="p1" medico="m3" n_sala="s2">
+            <fecha>17/10/2024</fecha>
+            <hora>17:15</hora>
+            <motivo>Carie</motivo>
+        </cita>
+        <cita paciente="p4" medico="m1" n_sala="s5" acudido="si">
+            <fecha>12/10/2024</fecha>
+            <hora>16:00</hora>
+            <motivo>Dolor muscular</motivo>
+        </cita>
+        <cita paciente="p2" medico="m2" n_sala="s1" acudido="no">
+            <fecha>17/6/2024</fecha>
+            <hora>12:10</hora>
+            <motivo>Carie</motivo>
+        </cita>
+        <cita paciente="p3" medico="m3" n_sala="s2">
+            <fecha>26/10/2024</fecha>
+            <hora>9:30</hora>
+            <motivo>Dolor de cabeza</motivo>
+        </cita>
+        <cita paciente="p4" medico="m1" n_sala="s3">
+            <fecha>14/12/2024</fecha>
+            <hora>10:45</hora>
+            <motivo>Cirugia</motivo>
+        </cita>
+        <cita paciente="p5" medico="m2" n_sala="s3" acudido="si">
+            <fecha>1/10/2024</fecha>
+            <hora>15:00</hora>
+            <motivo>Analitica</motivo>
+        </cita>
+        <cita paciente="p1" medico="m3" n_sala="s4" acudido="no">
+            <fecha>13/2/2024</fecha>
+            <hora>12:00</hora>
+            <motivo>Limpieza</motivo>
+        </cita>
+        <cita paciente="p2" medico="m1" n_sala="s5">
+            <fecha>25/11/2024</fecha>
+            <hora>17:15</hora>
+            <motivo>Carie</motivo>
+        </cita>
+        <cita paciente="p3" medico="m2" n_sala="s1">
+            <fecha>17/10/2024</fecha>
+            <hora>20:00</hora>
+            <motivo>Cirugia</motivo>
+        </cita>
+        <cita paciente="p4" medico="m3" n_sala="s2" acudido="si">
+            <fecha>14/12/2023</fecha>
+            <hora>13:45</hora>
+            <motivo>Analitica</motivo>
+        </cita>
+    </citas>
+</hospital>

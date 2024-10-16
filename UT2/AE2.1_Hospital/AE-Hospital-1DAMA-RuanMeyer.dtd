@@ -1,0 +1,45 @@
+<!-- 1DAMA - Ruan Meyer -->
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+
+<!ELEMENT hospital (pacientes, medicos, salas, citas)>
+
+<!ELEMENT pacientes (paciente+)>
+    <!ELEMENT paciente (nombre, apellidos, fecha_nacimiento, direccion)>
+        <!ELEMENT fecha_nacimiento (#PCDATA)>
+        <!ATTLIST paciente id ID #REQUIRED>
+        <!ATTLIST paciente sexo (maculino|femenino|otro) #REQUIRED>
+        <!ATTLIST paciente n_seguridad_social CDATA #IMPLIED>
+        <!ELEMENT direccion (nombre_via, numero, ciudad, contacto+)>
+            <!ELEMENT nombre_via (#PCDATA)>
+            <!ELEMENT numero (#PCDATA)>
+            <!ELEMENT ciudad (#PCDATA)>
+            <!ATTLIST direccion tipo_via (calle | callejon | avenida) #REQUIRED>
+            <!ELEMENT contacto (#PCDATA)>
+                <!ATTLIST contacto tipo (fijo | movil) #REQUIRED>
+
+<!ELEMENT medicos (medico+)>
+    <!ELEMENT medico (nombre, apellidos, especialidad, n_colegiado, departamento)>
+        <!ELEMENT especialidad (#PCDATA)>
+        <!ELEMENT n_colegiado (#PCDATA)>
+        <!ELEMENT departamento (#PCDATA)>
+        <!ATTLIST medico id ID #REQUIRED>
+
+<!ELEMENT salas (sala+)>
+    <!ELEMENT sala (tipo_sala, capacidad, equipos*)>
+        <!ATTLIST sala n_sala ID #REQUIRED>
+        <!ELEMENT tipo_sala (#PCDATA)>
+        <!ELEMENT capacidad (#PCDATA)>
+        <!ELEMENT equipos (equipo+)>
+            <!ELEMENT equipo (#PCDATA)>
+
+<!ELEMENT citas (cita+)>
+    <!ELEMENT cita (fecha, hora, motivo)>
+        <!ATTLIST cita paciente IDREF #REQUIRED>
+        <!ATTLIST cita medico IDREF #REQUIRED>
+        <!ATTLIST cita n_sala IDREF #REQUIRED>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT hora (#PCDATA)>
+        <!ELEMENT motivo (#PCDATA)>
+        <!ATTLIST cita acudido (si | no) #IMPLIED>
