@@ -16,6 +16,20 @@
                     985368156
                 </contacto>
             </direccion>
+            <historial>
+                <consulta medico="m1">
+                    <fecha_consulta>18/2/2015</fecha_consulta>
+                    <motivo_visita>Dolor de cabeza</motivo_visita>
+                    <diagnostico>Gripe A</diagnostico>
+                    <tratamiento>Ibuprofeno</tratamiento>
+                </consulta>
+                <consulta medico="m3">
+                    <fecha_consulta>24/12/2018</fecha_consulta>
+                    <motivo_visita>Pierna rota</motivo_visita>
+                    <diagnostico>Pierna rota</diagnostico>
+                    <tratamiento>Fisioterapia</tratamiento>
+                </consulta>
+            </historial>
         </paciente>
         <paciente id="p2" sexo="femenino">
             <nombre>Maria</nombre>
@@ -32,6 +46,7 @@
                     698237586
                 </contacto>
             </direccion>
+            <historial></historial>
         </paciente>
         <paciente id="p3" sexo="otro">
             <nombre>Sapo</nombre>
@@ -45,6 +60,14 @@
                     675953148
                 </contacto>
             </direccion>
+            <historial>
+                <consulta medico="m1">
+                    <fecha_consulta>22/5/2019</fecha_consulta>
+                    <motivo_visita>Dolor de dientes</motivo_visita>
+                    <diagnostico>Caries dental</diagnostico>
+                    <tratamiento>Remoción del diente</tratamiento>
+                </consulta>
+            </historial>
         </paciente>
         <paciente id="p4" sexo="maculino">
             <nombre>Carlos</nombre>
@@ -58,6 +81,20 @@
                     985269753
                 </contacto>
             </direccion>
+            <historial>
+                <consulta medico="m3">
+                    <fecha_consulta>22/5/2024</fecha_consulta>
+                    <motivo_visita>Dolor en el brazo</motivo_visita>
+                    <diagnostico>Lesion muscular</diagnostico>
+                    <tratamiento>Fisioterapia</tratamiento>
+                </consulta>
+                <consulta medico="m2">
+                    <fecha_consulta>24/9/2023</fecha_consulta>
+                    <motivo_visita>Dolor de cabeza</motivo_visita>
+                    <diagnostico>Gripe</diagnostico>
+                    <tratamiento>Paracetamol</tratamiento>
+                </consulta>
+            </historial>
         </paciente>
         <paciente id="p5" sexo="maculino">
             <nombre>Isadora</nombre>
@@ -71,6 +108,14 @@
                     685324952
                 </contacto>
             </direccion>
+            <historial>
+                <consulta medico="m2">
+                    <fecha_consulta>5/9/2022</fecha_consulta>
+                    <motivo_visita>Dolor de espaldas</motivo_visita>
+                    <diagnostico>espalditis</diagnostico>
+                    <tratamiento>Fisioterapia</tratamiento>
+                </consulta> 
+            </historial>
         </paciente>
     </pacientes>
 

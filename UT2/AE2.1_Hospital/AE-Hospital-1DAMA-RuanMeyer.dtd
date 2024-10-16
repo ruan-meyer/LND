@@ -6,7 +6,7 @@
 <!ELEMENT hospital (pacientes, medicos, salas, citas)>
 
 <!ELEMENT pacientes (paciente+)>
-    <!ELEMENT paciente (nombre, apellidos, fecha_nacimiento, direccion)>
+    <!ELEMENT paciente (nombre, apellidos, fecha_nacimiento, direccion, historial)>
         <!ELEMENT fecha_nacimiento (#PCDATA)>
         <!ATTLIST paciente id ID #REQUIRED>
         <!ATTLIST paciente sexo (maculino|femenino|otro) #REQUIRED>
@@ -18,6 +18,14 @@
             <!ATTLIST direccion tipo_via (calle | callejon | avenida) #REQUIRED>
             <!ELEMENT contacto (#PCDATA)>
                 <!ATTLIST contacto tipo (fijo | movil) #REQUIRED>
+        <!ELEMENT historial (consulta*)>
+            <!ELEMENT consulta (fecha_consulta, motivo_visita, diagnostico, tratamiento?)>
+                <!ELEMENT fecha_consulta (#PCDATA)>
+                <!ELEMENT motivo_visita (#PCDATA)>
+                <!ELEMENT diagnostico (#PCDATA)>
+                <!ELEMENT tratamiento (#PCDATA)>
+                <!ATTLIST consulta medico IDREF #REQUIRED>
+
 
 <!ELEMENT medicos (medico+)>
     <!ELEMENT medico (nombre, apellidos, especialidad, n_colegiado, departamento)>
