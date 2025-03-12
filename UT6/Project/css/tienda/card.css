@@ -1,0 +1,97 @@
+.card-box {
+    display: flex;
+}
+
+.card-item {
+    width: 50%;
+}
+
+.card-item img {
+    max-width: 100%;
+}
+
+.card-text {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.shoes {
+    display: inline-block;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-width: 0.5em;
+    background-color: #d9d9d9;
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    font-weight: bold;
+}
+
+.card-box h2 {
+    font-size: 2em;
+}
+
+.card-box p.text{
+    color: #808080;
+    text-align: justify;
+}
+
+.price-sec {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.price-sec p {
+    display: inline-block;
+    margin: 0;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price p:first-child {
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.price p:nth-child(2){
+    color: #ff0000;
+    text-decoration: line-through;
+}
+
+.circles {
+    display: flex;
+    align-items: center;
+    padding-right: 0.5em;
+}
+
+.circles i {
+    font-size: 1.5em;
+    padding-left: 0.3em;
+}
+
+.card-box button {
+    display: flex;
+    justify-content: center;
+
+    background-color: #000000;
+    color: #ffffff;
+    border-style: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    
+    font-weight: bold;
+}
+
+.card-box button i {
+    font-size: 1.5em;
+    padding-right: 0.5em;
+}
