@@ -1,0 +1,86 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333333;
+}
+
+header .navbar-block {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 3em;
+    padding-left: 1em;
+}
+
+header h1 {
+    margin: 0.3em;
+    font-size: 1.5em;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav.navbar-block {
+    gap: 1.3em;
+}
+
+header span {
+    color: #b36b00;
+    font-weight: lighter;
+}
+
+header button {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #b36b00;
+    color: #b36b00;
+    padding: 0.3em;
+}
+
+header .buttons-block{
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em;
+    padding-right: 0.5em;
+}
+
+header button:first-child {
+    background-color: #333333;
+}
+
+header button:nth-child(2){
+    background-color: #ffffff;
+}
+
+/*Tablet*/
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    header .buttons-block{
+        display: none;
+        visibility: hidden;
+    }
+
+    header .menu {
+        padding-right: 0.5em;
+    }
+}
+
+/*Phone*/
+@media screen and (max-width: 767px) {
+    header .buttons-block{
+        display: none;
+        visibility: hidden;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3em;
+        padding-bottom: 1em;
+        padding-top: 0.3em;
+    }
+}
