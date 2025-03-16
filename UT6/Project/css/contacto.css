@@ -62,8 +62,9 @@ main.contacto form > div {
     font-weight: bold;
 }
 
-main.contacto form > div span {
+main.contacto .form-box a {
     color: #8600b3;
+    text-decoration: none;
 }
 
 main.contacto form > div > input {
