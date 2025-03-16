@@ -1,10 +1,34 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/contacto.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
     </head>
     <body>
+        <header>
+            <div class="navbar-block">
+                <img src="media/Logo.png" alt="Logo">
+                <h1>ALL<span>SHOES</span></h1>
+            </div>
+            <nav class="navbar-block menu">
+                <a href="index.html">INICIO</a>
+                <a href="tienda.html">TIENDA</a>
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="contacto.html">CONTACTO</a>
+            </nav>
+            <div class="navbar-block buttons-block">
+                <button>
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </button>
+                <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Register
+                </button>
+            </div>
+        </header>
         <main class="contacto">
             <h1>CONTACTO</h1>
             <div class="main-box">
@@ -13,10 +37,10 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, nihil?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sit hic exepturi minima omnis odio odit quam modi, fugiat ut vitae voluptae? Dolorum uliam cumque achitecto nihil voluptate voluptatum es sun voluptas accusamus quas iste itaque praesentium officiis, excepturi sapiente</p>
                     <h3>E-Mail</h3>
-                    <p>
+                    <a href="mailto:info@allshoes.es">
                         <i class="fa-solid fa-envelope"></i>
                         info@allshoes.es
-                    </p>
+                    </a>
                     <h3>Redes sociales</h3>
                     <div>
                         <img>suicide</img>
@@ -24,11 +48,16 @@
                 </div>
                 <div class="form-box">
                     <form>
-                        <input type="text" placeholder="Nombre"/>
-                        <input type="email" placeholder="E-Mail (direccions@email.com)"/>
-                        <input type="tel" placeholder="Teléfono (XXX XXX XXX)"/>
-                        <input type="text" placeholder="Tema">
-                        <textarea placeholder="Mensaje" rows="10" cols="50"></textarea>
+                        <input type="text" placeholder="Nombre" minlength="2" required/>
+                        <input type="email" placeholder="E-Mail (direccions@email.com)" required/>
+                        <input type="tel" placeholder="Teléfono (XXX XXX XXX)" pattern="\d{9}" required/>
+                        <select placeholder="TEMA">
+                            <option value="" selected hidden>Selecciona una opción...</option>
+                            <option>Tema 1</option>
+                            <option>Tema 2</option>
+                            <option>Tema 3</option>
+                        </select>
+                        <textarea placeholder="Mensaje" rows="10" cols="50" required></textarea>
                         <div>
                             <input type="checkbox" id="check">
                             Aceptar <span>condiciones</span>
@@ -41,5 +70,38 @@
                 </div>
             </div>
         </main>
+        <footer>
+            <div>
+                <h3>Compañía</h3>
+                <p>Nosotros</p>
+                <p>Nuestros Servicios</p>
+                <p>Política Privacidad</p>
+                <p>Afiliate</p>
+            </div>
+            <div>
+                <h3>Ayuda</h3>
+                <p>Preguntas</p>
+                <p>Compras</p>
+                <p>Envíos</p>
+                <p>Afiliate</p>
+                <p>Pago</p>
+            </div>
+            <div>
+                <h3>Tienda</h3>
+                <p>Ropa</p>
+                <p>Zapatos</p>
+                <p>Teléfonos</p>
+                <p>Pantallas</p>
+            </div>
+            <div>
+                <h3>Siguenos</h3>
+                <div id="follow">
+                    <i class="fa-brands fa-facebook footer-ico"></i>
+                    <i class="fa-brands fa-instagram footer-ico"></i>
+                    <i class="fa-solid fa-x footer-ico"></i>
+                    <i class="fa-brands fa-linkedin footer-ico"></i>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

@@ -29,6 +29,20 @@ main.contacto div.text-box h3 {
     text-decoration: underline;
 }
 
+main.contacto div.text-box a {
+    color: #000000;
+    text-decoration: none;
+
+    transition: font-size;
+    transition-duration: 1s;
+}
+
+main.contacto div.text-box a:hover {
+    color: #cc7a00;
+    font-weight: 900;
+    font-size: 1.01em;
+}
+
 main.contacto div.text-box p:first-of-type {
     font-weight: bold;
 }
@@ -56,16 +70,19 @@ main.contacto form > div > input {
     height: 0.8em;
 }
 
-main.contacto input, main.contacto textarea {
+main.contacto input, main.contacto textarea, main.contacto select {
     border-radius: 5px;
     border-width: 0.1em;
     border-style: solid;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
     padding-left: 0.5em;
+
+    color:#cc7a00;
+    border-color: #cc7a00;
 }
 
-main.contacto input:placeholder-shown, main.contacto textarea:placeholder-shown {
+main.contacto input:invalid, main.contacto textarea:invalid {
     background-color: #ffb3b3;
     color: #ff0000;
     border-color: #ff0000;
@@ -76,4 +93,22 @@ main.contacto div.form-box button {
     border-color: #cc7a00;
     border-radius: 5px;
     border-style: solid;
+}
+
+@media screen and (max-width: 1023px) {
+    main.contacto div.main-box {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    main.contacto div.text-box {
+        width: 100%;
+    }
+    
+    main.contacto div.form-box {
+        width: 95%;
+        border-style: solid;
+        border-color: #cc7a00;
+        padding: 1em;
+    }
 }

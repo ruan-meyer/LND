@@ -9,16 +9,50 @@ footer h3 {
     border-bottom-style: solid;
     border-bottom-color: orange;
 }
+
+footer p {
+    margin: 0.3em;
+}
+
+div#follow {
+    display: flex;
+    direction: row;
+    gap: 0.3em;
+}
+
 .footer-ico {
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 100%;
     border-style: solid;
-    border-color: #737373;
-    border-width: 0.5em;
+    border-width: 0;
+    min-height: 30px;
+    width: 30px;
     background-color: #737373;
     color: #ffffff;
 }
-footer p {
-    margin: 0.3em;
+
+.footer-ico.fa-facebook:hover {
+    background-color: #3b5998;
+}
+
+.footer-ico.fa-instagram:hover {
+    background: #833ab4;
+    background: linear-gradient(
+      to right,
+      #833ab4,#fd1d1d,#fcb045
+    );
+}
+
+.footer-ico.fa-x:hover {
+    background-color: #000000;
+}
+
+.footer-ico.fa-linkedin:hover {
+    background-color: #0e76a8;
 }
 
 @media screen and (min-width: 769px) {
